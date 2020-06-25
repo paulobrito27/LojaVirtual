@@ -1,11 +1,20 @@
-﻿<h1>Texto</h1>
+﻿@model LojaVirtual.Models.Produto
+
+<h1>Texto</h1>
 <h2>teste do razor</h2>
 <h4>
     hora atual
 </h4>
 razor:
-@{ 
+@{
     string Nome = "Paulo José Maciel de Brito";
 }
 @DateTime.Now
 <h3>@Nome</h3>
+
+<br>
+<h2>Produto:</h2>
+@Model.Nome
+<br>
+@Model.Descricao<br>
+@Model.Valor.ToString("C")
