@@ -40,10 +40,12 @@ namespace LojaVirtual
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
+
+            //Utiliza antes do StaticFiles para poder ter acesso aos mesmos ao iniciar
+            app.UseDefaultFiles();
+
             app.UseStaticFiles();
-
             app.UseRouting();
-
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
