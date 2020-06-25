@@ -8,11 +8,9 @@ namespace LojaVirtual.Controllers
 {
     public class ProdutoController : Controller
     {
-        public IActionResult Index()
+        public ActionResult Vizualizar()
         {
-            return new ContentResult() { Content = "<h1>Deu certo</h1>" +
-                "</br> <h3>Meu primeiro html</h3>" +
-                "<button>Acessar</button>", ContentType = "text/html" };
+            return View();
         }
     }
 }
