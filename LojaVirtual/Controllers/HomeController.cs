@@ -8,12 +8,27 @@ namespace LojaVirtual.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        public ActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Contato()
+        public ActionResult Contato()
+        {
+            return View();
+        }
+
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        public ActionResult CarrinhoCompras()
+        {
+            return View();
+        }
+
+        public ActionResult CadastroCliente()
         {
             return View();
         }
