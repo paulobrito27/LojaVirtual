@@ -26,12 +26,11 @@ namespace LojaVirtual.Controllers
             contato.Email = HttpContext.Request.Form["email"];
             contato.Texto = HttpContext.Request.Form["texto"];
 
-            MailService.EnviaEmail(contato);
+            //MailService.EnviaEmail(contato);
 
-            return new ContentResult {Content =  string.Format(
-                "Mensagem enviada com sucesso!<br/><br/> nome:{0} <br/> email:{1} <br/>  texto:{2}",
-                contato.Nome, contato.Email, contato.Texto),
-                ContentType = "text/html"};
+            ViewData["MSG"] = "Mensagem enviada com sucesso!";
+
+            return View("Contato"); 
         }
 
         public IActionResult Login()
